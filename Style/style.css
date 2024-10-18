@@ -1,0 +1,171 @@
+:root {
+    /* Colors */
+    --theme-color: #ffad3b;
+    --primery-color: #200137;
+
+    /* fonts */
+    --heading-size: 3rem;
+    --subheading-size: 1.5rem;
+    --paragraph-size: 1.1rem;
+    --small-paragraph-size: 1rem;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: sans-serif;
+}
+
+/* Navbar style */
+header {
+    margin: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 25px;
+}
+
+.navbar ul li {
+    padding: 6px 15px;
+    margin: 6px;
+    border-radius: 30px;
+}
+
+.navbar a {
+    font-size: var(--paragraph-size);
+    text-decoration: none;
+    color: var(--primery-color);
+}
+
+/* main page style */
+
+/* #### Intro Section #### */
+main #name {
+    box-sizing: border-box !important;
+    width: 100vw;
+}
+
+main #name p {
+    padding-left: 42px;
+}
+
+main #name div {
+    margin: 1.5% 15%;
+    width: 25%;
+}
+
+#name div h1 {
+    padding-top: 11px;
+    font-size: var(--heading-size);
+    color: var(--theme-color);
+    display: grid;
+    justify-content: center;
+}
+/* second div in 1st section */
+#name div:nth-child(2) {
+    font-size: var(--subheading-size);
+    padding-left: 6rem;
+    width: 40% !important;
+}
+
+#name div:nth-child(2) h3 span {
+    color: var(--theme-color);
+    text-align: center;
+}
+
+#name div:nth-child(2) h3 #cursor {
+    display: inline-block;
+    width: 3.5px;
+    height: var(--subheading-size);
+    background-color: #9e9999;
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+}
+
+/*##### Responsive Design for Small Screens #### */
+
+@media screen and (max-width: 768px) {
+    :root {
+        --heading-size: 2.5rem;
+        --subheading-size: 1.2rem;
+        --paragraph-size: 1rem;
+        --small-paragraph-size: 0.9rem;
+    }
+
+    main #name p {
+        padding-left: 80px;
+    }
+
+    main #name div {
+        margin: 5% 10%;
+        width: 80%;
+    }
+
+    #name div:nth-child(2) {
+        width: 100% !important;
+        }
+
+    #name div h1 {
+        font-size: var(--heading-size);
+    }
+
+    #name div:nth-child(2) h3 {
+        font-size: var(--subheading-size);
+        padding-left: 20%;
+
+    }
+
+    #name div:nth-child(2) h3 #cursor {
+        height: var(--subheading-size);
+    }
+}
+
+@media screen and (max-width: 380px ) {
+    :root {
+        --heading-size: 2rem;
+        --subheading-size: 1rem;
+        --paragraph-size: 0.9rem;
+        --small-paragraph-size: 0.8rem;
+    }
+
+    main #name p {
+        padding-left: 10px;
+    }
+
+    main #name div {
+        margin: 5% 5%;
+        width: 90%;
+    }
+
+    #name div:nth-child(2) {
+        padding-left: 0;
+        width: 100% !important;
+    }
+
+    #name div h1 {
+        font-size: var(--heading-size);
+    }
+
+    #name div:nth-child(2) h3 {
+        font-size: var(--subheading-size);
+    }
+
+    #name div:nth-child(2) h3 #cursor {
+        height: var(--subheading-size);
+    }
+}
+
+/* Animation of blinking the cursor */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
